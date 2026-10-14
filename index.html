@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="ky">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Али | Frontend Developer Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+  <!-- Иконкалар үчүн FontAwesome кошуп койсок болот -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+</head>
+<body>
+
+  <!-- Навигация -->
+  <header class="header">
+    <div class="logo">&lt;Atai / Dev&gt;</div>
+    <nav class="nav-links">
+      <a href="#about">Мен жөнүндө</a>
+      <a href="#skills">Көндүмдөр</a>
+      <a href="#projects">Долбоорлор</a>
+      <a href="#contact">Байланыш</a>
+    </nav>
+    <button id="theme-toggle" class="theme-btn" aria-label="Тема алмаштыруу">🌙</button>
+  </header>
+
+  <!-- Башкы баннер (Hero) -->
+  <section class="hero">
+    <div class="hero-content">
+      <span class="badge">Frontend Developer</span>
+      <h1>Салам! Мен <span class="highlight">Али</span> 👋</h1>
+      <p>Колдонуучуга ынгайлуу, тез иштеген жана адаптивдүү веб-интерфейстерди (HTML, CSS, JavaScript, React) иштеп чыгам.</p>
+      
+      <div class="hero-btns">
+        <a href="#projects" class="btn primary">Долбоорлорду көрүү <i class="fa-solid fa-arrow-right"></i></a>
+        <a href="#contact" class="btn secondary">Связаться</a>
+      </div>
+
+      <!-- Статистика -->
+      <div class="hero-stats">
+        <div class="stat-item">
+          <h3>1+</h3>
+          <p>Жылдык тажрыйба</p>
+        </div>
+        <div class="stat-item">
+          <h3>10+</h3>
+          <p>Даяр долбоорлор</p>
+        </div>
+        <div class="stat-item">
+          <h3>100%</h3>
+          <p>Адаптивдүү дизайн</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Кенен "Мен жөнүндө" секциясы -->
+  <section id="about" class="section">
+    <h2 class="section-title">Мен жөнүндө</h2>
+    <p class="section-subtitle">Менин веб-разработкага болгон болгон кызыгууман жана максаттарым</p>
+
+    <div class="about-grid">
+      <div class="about-card">
+        <div class="about-icon"><i class="fa-solid fa-code"></i></div>
+        <h3>Менин багытым</h3>
+        <p>Мен фронтенд иштеп чыгуу боюнча адистешем. Азыркы тапта React, JavaScript (ES6+), асинхрондук суроо-талаптар (REST API) жана таза, окууга жеңил код жазууга басым жасайм.</p>
+      </div>
+
+      <div class="about-card">
+        <div class="about-icon"><i class="fa-solid fa-graduation-cap"></i></div>
+        <h3>Билим & Өнүгүү</h3>
+        <p>Өз алдымча жана практикалык долбоорлорду түзүү аркылуу дайыма билимимди тереңдетем. Реальный API'лер менен иштөө, алгоритмдерди оптимизациялоо мага аябай кызыктуу.</p>
+      </div>
+
+      <div class="about-card">
+        <div class="about-icon"><i class="fa-solid fa-rocket"></i></div>
+        <h3>Максаттарым</h3>
+        <p>Ыңгайлуу UX/UI интерфейстерди түзүү, заманбап фреймворкторду өздөштүрүү жана IT командаларда ири долбоорлорду ишке ашыруу.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Технологиялар жана Көндүмдөр -->
+  <section id="skills" class="section bg-alt">
+    <h2 class="section-title">Менин стек технологиям</h2>
+    
+    <div class="skills-grid">
+      <div class="skill-card">
+        <i class="fa-brands fa-html5 skill-icon"></i>
+        <span>HTML5 & CSS3</span>
+        <small>Semantic HTML, BEM, Flexbox, Grid</small>
+      </div>
+      <div class="skill-card">
+        <i class="fa-brands fa-js skill-icon"></i>
+        <span>JavaScript (ES6+)</span>
+        <small>DOM Manipulation, Fetch API, Async/Await</small>
+      </div>
+      <div class="skill-card">
+        <i class="fa-brands fa-react skill-icon"></i>
+        <span>React</span>
+        <small>Components, Hooks, Props, State</small>
+      </div>
+      <div class="skill-card">
+        <i class="fa-solid fa-network-wired skill-icon"></i>
+        <span>REST API</span>
+        <small>JSON, Fetch/Axios, API Integration</small>
+      </div>
+      <div class="skill-card">
+        <i class="fa-brands fa-git-alt skill-icon"></i>
+        <span>Git & GitHub</span>
+        <small>Version Control, Repositories</small>
+      </div>
+      <div class="skill-card">
+        <i class="fa-solid fa-mobile-screen-button skill-icon"></i>
+        <span>Responsive Design</span>
+        <small>Mobile-First, Cross-Browser</small>
+      </div>
+    </div>
+  </section>
+
+  <!-- Долбоорлор секциясы фильтр менен -->
+  <section id="projects" class="section">
+    <h2 class="section-title">Менин долбоорлорум</h2>
+
+    <!-- Фильтр кнопкалары -->
+    <div class="project-filters">
+      <button class="filter-btn active" data-filter="all">Бардыгы</button>
+      <button class="filter-btn" data-filter="js">JavaScript / API</button>
+      <button class="filter-btn" data-filter="react">React</button>
+      <button class="filter-btn" data-filter="css">UI / CSS</button>
+    </div>
+
+    <div class="projects-grid">
+
+      <!-- Долбоор 1 -->
+      <div class="project-card" data-category="js">
+        <div class="project-info">
+          <span class="project-category">JavaScript / API</span>
+          <h3>Рецепттерди издөө тиркемеси</h3>
+          <p>TheMealDB REST API менен иштеп, тамактарды издөө, фильтрациялоо жана рецепттерди алуу тиркемеси.</p>
+          <div class="tags">
+            <span>JavaScript</span>
+            <span>REST API</span>
+            <span>CSS3</span>
+          </div>
+          <div class="project-links">
+            <a href="#" target="_blank"><i class="fa-brands fa-github"></i> GitHub</a>
+            <a href="#" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i> Live Demo</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Долбоор 2 -->
+      <div class="project-card" data-category="css">
+        <div class="project-info">
+          <span class="project-category">UI / CSS</span>
+          <h3>Заманбап Веб-Калькулятор</h3>
+          <p>Мобилдик стилдеги, темаларды которуу мүмкүндүгү бар жана толук функционалдуу калькулятор.</p>
+          <div class="tags">
+            <span>HTML</span>
+            <span>CSS3</span>
+            <span>JavaScript</span>
+          </div>
+          <div class="project-links">
+            <a href="#" target="_blank"><i class="fa-brands fa-github"></i> GitHub</a>
+            <a href="#" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i> Live Demo</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Долбоор 3 -->
+      <div class="project-card" data-category="js">
+        <div class="project-info">
+          <span class="project-category">JavaScript</span>
+          <h3>Колдонуучуларды фильтрациялоо</h3>
+          <p>Маалыматтар базасынан издөө, аты-жөнү же параметрлери боюнча фильтрлөө тутуму.</p>
+          <div class="tags">
+            <span>JS ES6+</span>
+            <span>Array Methods</span>
+            <span>DOM</span>
+          </div>
+          <div class="project-links">
+            <a href="#" target="_blank"><i class="fa-brands fa-github"></i> GitHub</a>
+            <a href="#" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i> Live Demo</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Долбоор 4 -->
+      <div class="project-card" data-category="react">
+        <div class="project-info">
+          <span class="project-category">React</span>
+          <h3>React Card Components App</h3>
+          <p>Компоненттик архитектура, Props жана State колдонуу менен жасалган интерактивдүү тиркеме.</p>
+          <div class="tags">
+            <span>React.js</span>
+            <span>JSX</span>
+            <span>CSS Modules</span>
+          </div>
+          <div class="project-links">
+            <a href="#" target="_blank"><i class="fa-brands fa-github"></i> GitHub</a>
+            <a href="#" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i> Live Demo</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Байланыш жана Форма -->
+  <section id="contact" class="section bg-alt">
+    <h2 class="section-title">Мени менен байланышуу</h2>
+    <p class="section-subtitle">Жаңы долбоорлор же сунуштар боюнча жазыңыз!</p>
+
+    <div class="contact-container">
+      <!-- Контакт маалыматтар -->
+      <div class="contact-info">
+        <div class="info-item">
+          <i class="fa-solid fa-envelope"></i>
+          <div>
+            <h4>Email</h4>
+            <p>example@gmail.com</p>
+          </div>
+        </div>
+        <div class="info-item">
+          <i class="fa-brands fa-telegram"></i>
+          <div>
+            <h4>Telegram</h4>
+            <p>@your_username</p>
+          </div>
+        </div>
+        <div class="info-item">
+          <i class="fa-brands fa-github"></i>
+          <div>
+            <h4>GitHub</h4>
+            <p>github.com/your-profile</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Билдирүү жөнөтүү формасы -->
+      <form class="contact-form" id="contact-form">
+        <div class="form-group">
+          <input type="text" placeholder="Сиздин атыңыз" required />
+        </div>
+        <div class="form-group">
+          <input type="email" placeholder="Сиздин Email" required />
+        </div>
+        <div class="form-group">
+          <textarea rows="5" placeholder="Билдирүүңүз..." required></textarea>
+        </div>
+        <button type="submit" class="btn primary">Билдирүүнү жөнөтүү</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Футер -->
+  <footer>
+    <p>© 2026 Атай. БАРДЫК УКУКТАР КОРГОЛГОН.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

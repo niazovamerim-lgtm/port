@@ -265,6 +265,18 @@ body {
   border-radius: 12px;
   border: 1px solid var(--border-color);
   padding: 25px;
+  cursor: pointer;
+  transition: transform 0.2s, border-color 0.2s;
+}
+
+.project-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--primary-color);
+}
+
+.project-card:focus-visible {
+  outline: 2px solid var(--primary-color);
+  outline-offset: 3px;
 }
 
 .project-category {

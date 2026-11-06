@@ -32,3 +32,17 @@ filterBtns.forEach(btn => {
     });
   });
 });
+
+projectCards.forEach(card => {
+  card.addEventListener('click', event => {
+    if (!event.target.closest('a')) {
+      window.location.href = card.dataset.projectUrl;
+    }
+  });
+
+  card.addEventListener('keydown', event => {
+    if (event.key === 'Enter' && !event.target.closest('a')) {
+      window.location.href = card.dataset.projectUrl;
+    }
+  });
+});
